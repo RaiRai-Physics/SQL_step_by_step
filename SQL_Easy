@@ -1,0 +1,19 @@
+Easy 1: View all customers
+
+SELECT *
+FROM customers;
+
+Easy 2: Find completed orders
+
+SELECT *
+FROM orders
+WHERE status = 'Completed';
+
+Easy 3: Count orders by status
+
+SELECT 
+    status,
+    COUNT(*) AS order_count
+FROM orders
+GROUP BY status
+ORDER BY order_count DESC;
